@@ -8,18 +8,32 @@
 
 import UIKit
 
-class ToDoListViewController: UIViewController {
-
+class ToDoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+    
+    //MARK : IBOutlets
+    
+    @IBOutlet weak var newItemTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var itemTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    //MARK : Set ToDoListViewController as UItableView and TextField Delegate and data Source
+        
+        itemTableView.delegate = self
+        itemTableView.dataSource = self
+        newItemTextField.delegate = self
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK : IBActions
+    
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
     }
-
+    
 
 }
 

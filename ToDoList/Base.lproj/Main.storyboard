@@ -34,6 +34,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEy-wK-ORF">
                                         <rect key="frame" x="291" y="0.0" width="32" height="30"/>
                                         <state key="normal" title="ADD"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0k-rm-bp4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -55,10 +58,15 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="WEy-wK-ORF" id="5AV-pZ-mXs"/>
+                        <outlet property="itemTableView" destination="N2B-Ny-Q5j" id="XKN-va-Nxl"/>
+                        <outlet property="newItemTextField" destination="IJH-1t-1zl" id="dYd-Fc-kjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.40000000000001" y="135.38230884557723"/>
+            <point key="canvasLocation" x="-228" y="204"/>
         </scene>
     </scenes>
 </document>
