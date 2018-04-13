@@ -10,6 +10,10 @@ import UIKit
 
 class ToDoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
+    //MARK : Call the Item Objects
+    var itemArray = [Item]()
+    
+    
     //MARK : IBOutlets
     
     @IBOutlet weak var newItemTextField: UITextField!
@@ -32,8 +36,48 @@ class ToDoListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     @IBAction func addButtonPressed(_ sender: Any) {
+        
+        let newItem = Item()
+        newItem.item = newItemTextField.text!
+        
+        self.itemArray.append(newItem)
+        
+        self.itemTableView.reloadData()
+        
+        self.newItemTextField.text! = ""
+        
+        
+        
     }
     
-
+    //MARK : TableView DataSource Methods
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewItemCell", for: indexPath)
+        
+        cell.textLabel?.text = itemArray[indexPath.row].item
+        
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemArray.count
+    }
+    
+    
+    
+    //Mark - Tableview Delegate Methods
+    
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  
+    if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    } else {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }
+  
+    }
 }
-
