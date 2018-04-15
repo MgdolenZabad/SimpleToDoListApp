@@ -56,15 +56,47 @@
 		5519B4FB2080475300F32779 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				5519B4FC2080475300F32779 /* AppDelegate.swift */,
-				5519B4FE2080475300F32779 /* ToDoListViewController.swift */,
-				5519B5002080475300F32779 /* Main.storyboard */,
-				5519B5032080475300F32779 /* Assets.xcassets */,
-				5519B5052080475300F32779 /* LaunchScreen.storyboard */,
 				5519B5082080475300F32779 /* Info.plist */,
-				5519B50E2080577100F32779 /* Item.swift */,
+				5519B5122082694900F32779 /* Model */,
+				5519B5112082693F00F32779 /* View */,
+				5519B5102082693200F32779 /* Controller */,
+				5519B5132082696600F32779 /* Supporting Files */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		5519B5102082693200F32779 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5519B4FC2080475300F32779 /* AppDelegate.swift */,
+				5519B4FE2080475300F32779 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5519B5112082693F00F32779 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5519B5002080475300F32779 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5519B5122082694900F32779 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5519B50E2080577100F32779 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5519B5132082696600F32779 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5519B5052080475300F32779 /* LaunchScreen.storyboard */,
+				5519B5032080475300F32779 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

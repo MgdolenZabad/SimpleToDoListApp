@@ -32,20 +32,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="ZBu-Uq-kmq">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="ZBu-Uq-kmq">
                                 <rect key="frame" x="16" y="46" width="323" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add New To Do Item" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJH-1t-1zl">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add New To Do Item" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IJH-1t-1zl">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="34"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEy-wK-ORF">
-                                        <rect key="frame" x="291" y="0.0" width="32" height="30"/>
+                                        <rect key="frame" x="230" y="0.0" width="32" height="34"/>
                                         <state key="normal" title="ADD"/>
                                         <connections>
                                             <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0k-rm-bp4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abu-Ha-Sa1">
+                                        <rect key="frame" x="293" y="0.0" width="30" height="34"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OkM-vf-WQZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -70,13 +78,14 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="WEy-wK-ORF" id="5AV-pZ-mXs"/>
+                        <outlet property="editButton" destination="abu-Ha-Sa1" id="pKQ-4I-BCo"/>
                         <outlet property="itemTableView" destination="N2B-Ny-Q5j" id="XKN-va-Nxl"/>
                         <outlet property="newItemTextField" destination="IJH-1t-1zl" id="dYd-Fc-kjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-228" y="204"/>
+            <point key="canvasLocation" x="-449" y="72"/>
         </scene>
     </scenes>
 </document>
